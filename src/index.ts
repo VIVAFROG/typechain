@@ -1,11 +1,20 @@
-const name = "Yoonsik",
-    age = 30,
-    gender = "male";
+class Human{
+    public name: string;
+    public age: number;
+    public gender: string;
+    constructor(name: string, age:number, gender?:string){
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
+}
 
-const sayHi = (name:string, age:number, gender:string):string => {
-    return `Hello ${name}, you are ${age}, you are ${gender}`;
+const yoonsik = new Human("Yoonsik", 30, "male");
+
+const sayHi = (person: Human):string => {
+    return `Hello ${person.name}, you are ${person.age}, you are ${person.gender}`;
 };
 
-console.log(sayHi(name,age,gender));
+console.log(sayHi(yoonsik));
 
 export{};
