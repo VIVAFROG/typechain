@@ -12,6 +12,7 @@
     "tsc-watch": "^1.0.21"
   },
   "dependencies": {
+    "crypto-js": "^3.1.9-1",
     "tslint": "^5.10.0"
   }
 }
