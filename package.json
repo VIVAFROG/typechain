@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "tsc-watch": "^1.0.21"
+  },
+  "dependencies": {
+    "tslint": "^5.10.0"
   }
 }
