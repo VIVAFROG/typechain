@@ -41,7 +41,7 @@ const genesisBlock: Block = new Block(0, "2020202020202", "", "Hello", 123456);
 
 let blockchain: Block[] = [genesisBlock];
 
-//const getBlockchain = (): Block[] => blockchain;
+const getBlockchain = (): Block[] => blockchain;
 
 const getLatestBlock = (): Block => blockchain[blockchain.length - 1];
 
@@ -64,6 +64,7 @@ const createNewBlock = (data: string): Block => {
     data,
     newTimestamp
   );
+  addBlock(newBlock);
   return newBlock;
 };
 
@@ -90,6 +91,10 @@ const addBlock =(candidateBlock: Block) : void => {
     }
 };
 
+createNewBlock("second block");
+createNewBlock("third block");
+createNewBlock("fourth block");
 
+console.log(blockchain);
 
 export {};
